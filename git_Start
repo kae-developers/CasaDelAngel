@@ -1,0 +1,35 @@
+git init
+git add .
+git commit -m "First commit"
+git remote add origin remote https://github.com/kae-developers/CasaAngel.git
+git push origin master
+
+
+README.md 
+block codigo 
+  ```bash
+    Codigo
+  ```
+  
+  titulo
+  # para los main
+  ## secundarios
+  
+> ### Importate
+>
+> text
+>
+> - item
+> - item
+
+para codigo
+```nginx
+http {
+    # ...
+    include sites-enabled/*.conf;
+}
+```
+
+links
+- [phpcs](https://github.com/squizlabs/php_codesniffer)
+- [phpunit](https://phpunit.de)
