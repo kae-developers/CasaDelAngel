@@ -5,6 +5,15 @@ git remote add origin remote https://github.com/kae-developers/CasaAngel.git
 git push origin master
 
 
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/kae-developers/CasaDelAngel.git
+git push -u origin master
+
+
 README.md 
 block codigo 
   ```bash
