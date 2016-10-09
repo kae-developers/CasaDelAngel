@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/10/2016, 07:55:43 AM
+    Author     : kevin
+*/
+
+@CHARSET "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+}
+.container {
+    padding: 10px;
+    margin-top: 30px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.thumbnail > img {
+     max-height: 170px;
+     width: auto;
+}
+ html,body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    top: 0px;
+    background-image: url(../img/bg_dotted.gif);
+    background-repeat: repeat;
+    overflow-x: hidden;
+    
+}
+
+#PanelMenuMain{
+    width: 250px;
+    height: 100%;
+    position: absolute;
+    background-color: #f7f7f9;
+    top: 0px;
+    left: -250px;
+    z-index: 100;
+    transition:0.8s;
+    -webkit-transition:0.8s;
+    -moz-transition:0.8s;
+}
+
+#PanelMenuMain > div {
+    padding: 5px;
+}
+
+#PanelMenuMain > img {
+    width: 145px;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    transition: all .2s ease-in-out;
+}
+
+#PanelMenuMain > img:hover{
+    transform: scale(1.1);
+}
+
+#MainContainer{
+    transition:0.8s;
+    -webkit-transition:0.8s;
+    -moz-transition:0.8s;
+}
+
+header{
+    height: 50px;
+    width: 100%;
+    background: #337ab7;
+    color: #ffffff;
+}
+
+header  .input-group{
+    padding: 8px;
+}
+
+#headerTitle{
+    color: #FFF;
+    margin-top: 5px;
+}
+
+.TitleSection{
+	color: #ffffff;
+	background-color: #337ab7;
+	padding: 10px;
+	width: 100% ;
+        text-align: center;
+}
+
+
+.MainBarIcons{
+    height: 35px;
+    padding: 5px;
+    margin-top: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    float: left;
+}
+
+#lb_menuMainBar{
+    display: none;
+    margin-top: 10px;
+}
+
+.MoveWindowsRight{
+    transform: translate(250px,0);
+    -webkit-transform: translate(250px,0); /** Safari & Chrome **/
+    -o-transform: translate(250px,0); /** Opera **/
+    -moz-transform: translate(250px,0); /** Firefox **/
+}
+
+
+
+.BlockUiMainContenedor{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(102,102,102,0.6);
+    position: absolute;
+    display: none;
+}
+
+.jumbotron{
+    background: #337ab7;
+    color: #FFF;
+}

@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/10/2016, 07:55:43 AM
+    Author     : kevin
+*/
+
+html,body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.viewPort {
+    perspective: 2000px;
+}
+
+.Cubo {
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.face {
+    position: absolute;
+    transition: transform 1s linear;
+}
+.Cubo .Frente {
+
+    transform:  rotateY(-90deg) translateX(-50%) rotateY(0deg) translateX(50%) rotateY(90deg);
+    transform-origin: center center;
+}
+
+.Cubo .Izquierda {
+    transform:  rotateY(-90deg) translateX(-50%) rotateY(-90deg) translateX(50%) rotateY(90deg); 
+}
+
+.BotonGiro{
+    width: 50px;
+    height: 50px;
+    position: fixed;  
+    display: none;
+    cursor: pointer;
+}
+
+#BotonGiroCuboIzquierdo{
+    top: 50%;
+    left: 0;
+}
+
+#BotonGiroCuboDerecho{
+    top: 50%;
+    right: 0;
+}

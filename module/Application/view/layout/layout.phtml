@@ -1,0 +1,85 @@
+<?= $this->doctype() ?>
+
+<html lang="es">
+    <head>
+        <title>Casa Del Angel</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="<?= $this->basePath("css/bootstrap.min.css"); ?>" media="all" />
+        <link rel="stylesheet" href="<?= $this->basePath("css/Style.css"); ?>" media="all" />
+        <link rel="stylesheet" href="<?= $this->basePath("css/Cubo.css"); ?>" media="all" />
+
+        <link href="<?= $this->basePath("img/favicon.ico"); ?>" rel="shortcut icon" type="image/vnd.microsoft.icon">
+
+        <script type="text/javascript" src="<?= $this->basePath("js/jquery-3.1.0.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?= $this->basePath("js/bootstrap.min.js"); ?>"></script>
+        <script type="text/javascript" src="<?= $this->basePath("js/jsMenuBlinding.js"); ?>"></script>
+        <script type="text/javascript" src="<?= $this->basePath("js/MainScript.js"); ?>"></script>
+        <script type="text/javascript" src="<?= $this->basePath("js/jsCubo.js"); ?>"></script>
+        <script type="text/javascript" src="<?= $this->basePath("js/jsUtil.js"); ?>"></script>
+    </head>
+    <body> 
+        <section id="PanelMenuMain" >           
+            <img src="<?= $this->basePath('img/header_31d24b7.png') ?>" >
+            <hr>
+            <div>
+                <ul class="list-group">
+                    <li class="list-group-item active">
+                        <span class="badge"><label class="glyphicon glyphicon-home"></label></span>
+                        Home
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><label class="glyphicon glyphicon-book"></label></span>
+                        Libros
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><label class="glyphicon glyphicon-alert"></label></span>
+                        Boletines
+                    </li>
+                    <li class="list-group-item ">
+                        <span class="badge"><label class="glyphicon glyphicon-home"></label></span>
+                        Home
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><label class="glyphicon glyphicon-book"></label></span>
+                        Libros
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge"><label class="glyphicon glyphicon-alert"></label></span>
+                        Boletines
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <img id="BotonGiroCuboIzquierdo" class="BotonGiro" src="<?= $this->basePath('img/arrowIz.png'); ?>" >  
+
+        <section id="MainContainer">            
+            <header>
+                <div class="row-fluid">
+                    <div class="col-md-2">
+                        <img id="btn_menuMainBar" class="MainBarIcons" src="<?= $this->basePath("img/menu-icon-white.png") ?>" >
+                        <label id="lb_menuMainBar">Menu</label>
+                    </div>
+                    <div class="col-md-2"><h2 id="headerTitle" >Casa Angel</h2></div>
+                    <div class="col-md-6">
+                        <div class="img-rounded input-group ">
+                            <input type="text" placeholder="Buscar" class="form-control" >
+                            <span class="input-group-addon">
+                                <label class="glyphicon glyphicon-search"></label>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <img class="MainBarIcons" src="<?= $this->basePath("img/keyicon.png") ?>" >
+                        <img class="MainBarIcons" src="<?= $this->basePath("img/keyicon.png") ?>" >
+                        <img class="MainBarIcons" src="<?= $this->basePath("img/keyicon.png") ?>" >
+                    </div>
+                </div>
+            </header>
+            <div id="ContenedorViews" class="container">
+                <?= $this->content ?>
+            </div>
+            <img id="BotonGiroCuboDerecho" class="BotonGiro" src="<?= $this->basePath('img/arrowDe.png'); ?>" >  
+        </section>
+    </body>
+</html>
