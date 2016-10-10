@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="<?= $this->basePath("css/bootstrap.min.css"); ?>" media="all" />
         <link rel="stylesheet" href="<?= $this->basePath("css/Style.css"); ?>" media="all" />
         <link rel="stylesheet" href="<?= $this->basePath("css/Cubo.css"); ?>" media="all" />
-
+        <link rel="stylesheet" href="<?= $this->basePath("css/cubeAnimation.css"); ?>" media="all" />
         <link href="<?= $this->basePath("img/favicon.ico"); ?>" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
         <script type="text/javascript" src="<?= $this->basePath("js/jquery-3.1.0.min.js"); ?>"></script>
@@ -19,6 +19,7 @@
         <script type="text/javascript" src="<?= $this->basePath("js/jsUtil.js"); ?>"></script>
     </head>
     <body> 
+        <input type="hidden" value="<?= $this->basePath() ?>" id="basePath">
         <section id="PanelMenuMain" >           
             <img src="<?= $this->basePath('img/header_31d24b7.png') ?>" >
             <hr>

@@ -12,24 +12,36 @@ $(function () {
     $.Foro = function () {
 
         var Options = {
-            'Estado': 0,
+            'Estado': 0
         };
 
         if (Options['Estado'] === 0) {
             init();
         }
 
-        function OnLoadAnimation(){
-            
+        function OnLoadAnimation() {
+            BloquerVista($('#LadoIzquierdo'));
+        }
+
+        function RunAnimation() {
+            $("#forobanner img").each(function (index) {
+                $(this).delay(400 * index).fadeIn('slow');
+            });
         }
 
         function init() {
+            OnLoadAnimation();
             $.AjaxRapido({
                 'url': 'foro',
-                'reques': {},
-                'loadCallback': OnLoadAnimation,
-                'Callback': function(htmlResponce){
-                    $('#targetLadoIzquierdo').html(htmlResponce);
+                'request': {},
+                'Callback': function (htmlResponce) {
+                    DesbloquearVista($('#LadoIzquierdo'));
+                    setTimeout(function () {
+                        $('#LadoIzquierdo').html(htmlResponce);
+                        RunAnimation();
+                    }, 100);
+
+                    Options['Estado'] = 1;
                 }
             });
         }

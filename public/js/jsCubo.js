@@ -35,7 +35,7 @@ $(function () {
         var BotonDerecho = $('#' + Options['BotonDerecho']);
 
         PanelIzquierdo.css({'visibility': 'hidden'});
-        
+
         BotonDerecho.css({'display': 'none'});
         BotonIzquierdo.css({'display': 'block'});
 
@@ -71,8 +71,8 @@ $(function () {
 
         BotonIzquierdo.click(function () {
             if (Options['Estado'] === 0) {
+                Options['PanelFrente']['OnloadCallback']();
                 ScrollTop(function () {
-                    Options['PanelFrente']['OnloadCallback']();
                     RotarCentroIzquierdad();
                     Options['Estado'] = -1;
                     BotonIzquierdo.css({'display': 'none'});
@@ -83,8 +83,8 @@ $(function () {
 
         BotonDerecho.click(function () {
             if (Options['Estado'] === -1) {
+                Options['PanelIzquierda']['OnloadCallback']();
                 ScrollTop(function () {
-                    Options['PanelIzquierda']['OnloadCallback']();
                     DeshacerRotacionCentroIzquierda();
                     Options['Estado'] = 0;
                     BotonDerecho.css({'display': 'none'});

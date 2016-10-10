@@ -11,6 +11,21 @@
 function ErrorDisplay(titulo, msn, callback) {
     alert(msn);// importar jquery ui o la de boostrap 
 }
+var ValuesFace = {};
+function BloquerVista(face){
+    ValuesFace['background-color'] = face.css('background-color');
+    face.css({
+        'width':'100%',
+        'height':'800px',
+        'background-color':'#337ab7'
+    });
+    face.html('<div class="spinner"><div class="cube1"></div><div class="cube2"></div></div>');
+}
+
+function DesbloquearVista(face){
+   face.css(ValuesFace);
+   face.html('');
+}
 
 /*
  * 
@@ -24,7 +39,7 @@ $(function () {
     $.AjaxRapido = function (options) {
         var Options = {
             'url': '',
-            'reques': {},
+            'request': {},
             'loadCallback': null,
             'Callback': null,
             'Error': null
