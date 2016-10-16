@@ -32,7 +32,7 @@ $(function () {
         function init() {
             OnLoadAnimation();
             $.AjaxRapido({
-                'url': 'foro',
+                'url': $('#basePath').val()+'/application/index/foro',
                 'request': {},
                 'Callback': function (htmlResponce) {
                     DesbloquearVista($('#LadoIzquierdo'));

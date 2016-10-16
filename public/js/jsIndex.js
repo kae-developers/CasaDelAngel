@@ -16,4 +16,5 @@ function LoadCentralPanel(){
 }
 
 function LoadrightPanel(){
+    $('#LadoDerecho').Gallery();
 }

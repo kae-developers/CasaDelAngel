@@ -1,0 +1,58 @@
+<link href="<?= $this->basePath('css/jquery.gridder.min.css'); ?>" rel="stylesheet" media="all"/>
+<script type="text/javascript" src="<?= $this->basePath('js/jquery.gridder.min.js'); ?>" ></script>
+<div class="container">
+
+    <ul class="gridder">
+        <?php
+        $iterador = 1;
+        foreach ($this->imagenes as $imagen) {
+            ?>
+            <li class="gridder-list" data-griddercontent="#gridder-content-<?= $iterador ?>">
+                <img src="<?= $this->basePath('img/basura/' . $imagen['thumbnail']) ?>" class="img-responsive" />
+            </li>
+            <?php $iterador++;
+        }
+        ?>
+    </ul>
+
+    <?php
+    $iterador = 1;
+    foreach ($this->imagenes as $imagen) {
+        ?>
+        <div id="gridder-content-<?= $iterador ?>" class="gridder-content">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="<?= $this->basePath('img/basura/' . $imagen['src']) ?>" class="img-responsive" />
+                </div>
+                <div class="col-sm-6">
+                    <h2 class="TitleSection" >Imagen <?= $iterador ?></h2>
+                    <p><?= $imagen['Descripcion'] ?></p>
+                </div>
+            </div>
+        </div>
+        <?php $iterador++;
+    }
+    ?>
+
+    <!--    <ul class="gridder">
+            <li class="gridder-list" data-griddercontent="#gridder-content-1">
+                <img src="<?= $this->basePath('img/libros.png') ?>" class="img-responsive" />
+            </li>
+        </ul>
+    
+    
+        <div id="gridder-content-1" class="gridder-content">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img src="http://placehold.it/600x600" class="img-responsive" />
+                </div>
+                <div class="col-sm-6">
+                    <h2>Item 1</h2>
+                    <p>Tesxto</p>
+                </div>
+            </div>
+        </div>-->
+
+
+
+</div>

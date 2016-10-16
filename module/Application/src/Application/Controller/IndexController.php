@@ -12,6 +12,7 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Application\Model\IndexModel;
 
 class IndexController extends AbstractActionController {
 
@@ -23,6 +24,14 @@ class IndexController extends AbstractActionController {
         sleep(4);
         $view = new ViewModel();
         $view->setTerminal(true);
+        return $view;
+    }
+    
+     public function galleryAction() {
+        sleep(4);
+        $model = new IndexModel();
+        $view = new ViewModel($model->GetGallery());
+        $view->setTerminal(true);        
         return $view;
     }
 
