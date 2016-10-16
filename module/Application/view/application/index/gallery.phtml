@@ -10,7 +10,8 @@
             <li class="gridder-list" data-griddercontent="#gridder-content-<?= $iterador ?>">
                 <img src="<?= $this->basePath('img/basura/' . $imagen['thumbnail']) ?>" class="img-responsive" />
             </li>
-            <?php $iterador++;
+            <?php
+            $iterador++;
         }
         ?>
     </ul>
@@ -21,38 +22,23 @@
         ?>
         <div id="gridder-content-<?= $iterador ?>" class="gridder-content">
             <div class="row">
-                <div class="col-sm-6">
-                    <img src="<?= $this->basePath('img/basura/' . $imagen['src']) ?>" class="img-responsive" />
+                <div class="col-md-8">
+                    <img src="<?= $this->basePath('img/basura/' . $imagen['src']) ?>" class="img-responsive img-thumbnail" alt="Responsive image" />
                 </div>
-                <div class="col-sm-6">
-                    <h2 class="TitleSection" >Imagen <?= $iterador ?></h2>
-                    <p><?= $imagen['Descripcion'] ?></p>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Imagen <?= $iterador ?></div>
+                        <div class="panel-body">                           
+                            <?= $imagen['Descripcion'] ?>
+                        </div>
+                    </div>
+                    <p></p>
                 </div>
             </div>
         </div>
-        <?php $iterador++;
+        <?php
+        $iterador++;
     }
     ?>
-
-    <!--    <ul class="gridder">
-            <li class="gridder-list" data-griddercontent="#gridder-content-1">
-                <img src="<?= $this->basePath('img/libros.png') ?>" class="img-responsive" />
-            </li>
-        </ul>
-    
-    
-        <div id="gridder-content-1" class="gridder-content">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img src="http://placehold.it/600x600" class="img-responsive" />
-                </div>
-                <div class="col-sm-6">
-                    <h2>Item 1</h2>
-                    <p>Tesxto</p>
-                </div>
-            </div>
-        </div>-->
-
-
 
 </div>
