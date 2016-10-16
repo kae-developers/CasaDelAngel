@@ -14,6 +14,11 @@ git remote add origin https://github.com/kae-developers/CasaDelAngel.git
 git push -u origin master
 
 
+Para clonar el repo con las ramas 
+git branch -a  //Muestra las ramas en el repo externo por ejemplo una de las ramas se llama origin/Desarrollo
+git checkout -b Desarrollo origin/Desarrollo
+
+
 README.md 
 block codigo 
   ```bash
