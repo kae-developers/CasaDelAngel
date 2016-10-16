@@ -25,7 +25,7 @@ $(function () {
 
         function RunAnimation() {
             $("#forobanner img").each(function (index) {
-                $(this).delay(400 * index).fadeIn('slow');
+                $(this).delay(400 * index+1).fadeIn('slow');
             });
         }
 

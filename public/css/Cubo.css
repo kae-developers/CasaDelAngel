@@ -28,7 +28,6 @@ html,body{
     transition: transform 1s linear;
 }
 .Cubo .Frente {
-
     transform:  rotateY(-90deg) translateX(-50%) rotateY(0deg) translateX(50%) rotateY(90deg);
     transform-origin: center center;
 }
@@ -36,6 +35,11 @@ html,body{
 .Cubo .Izquierda {
     transform:  rotateY(-90deg) translateX(-50%) rotateY(-90deg) translateX(50%) rotateY(90deg); 
 }
+
+.Cubo .Derecha {
+    transform:  rotateY(-90deg) translateX(-50%) rotateY(90deg) translateX(50%) rotateY(90deg); 
+}
+
 
 .BotonGiro{
     width: 50px;
